@@ -1,6 +1,6 @@
 {
   "name": "escape-string-applescript",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Escape a string for use in AppleScript",
   "license": "MIT",
   "repository": "sindresorhus/escape-string-applescript",
