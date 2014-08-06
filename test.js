@@ -1,10 +1,10 @@
 'use strict';
-var assert = require('assert');
-var escapeString = require('./index');
+var test = require('ava');
+var escapeString = require('./');
 
-it('should correctly escape a string for use in AppleScript', function () {
-	assert.strictEqual(escapeString('foo"bar'), 'foo\\"bar');
-	assert.strictEqual(escapeString('foo\\bar'), 'foo\\\\bar');
-	assert.strictEqual(escapeString('weird\\\\name\\"\''), 'weird\\\\\\\\name\\\\\\"\'');
-	assert.strictEqual(escapeString(null), null);
+test('escape a string for use in AppleScript', function (t) {
+	t.assert(escapeString('foo"bar') === 'foo\\"bar');
+	t.assert(escapeString('foo\\bar') === 'foo\\\\bar');
+	t.assert(escapeString('weird\\\\name\\"\'') === 'weird\\\\\\\\name\\\\\\"\'');
+	t.assert(escapeString(null) === null);
 });
