@@ -7,7 +7,7 @@ According to the AppleScript [docs](https://developer.apple.com/library/mac/docu
 
 ## Install
 
-```sh
+```
 $ npm install --save escape-string-applescript
 ```
 
@@ -15,13 +15,13 @@ $ npm install --save escape-string-applescript
 ## Usage
 
 ```js
-var execFile = require('child_process').execFile;
-var escapeString = require('escape-string-applescript');
+const execFile = require('child_process').execFile;
+const escapeString = require('escape-string-applescript');
 
-var str = escapeString('"i like unicorns"');
-//=> \"i like unicorns\"
+const str = escapeString('"i like unicorns"');
+//=> '\"i like unicorns\"'
 
-var script = 'set unicornMessage to "' + str + '"';
+const script = 'set unicornMessage to "' + str + '"';
 
 execFile('osascript', ['-e', script]);
 ```
