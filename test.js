@@ -1,10 +1,9 @@
-'use strict';
-var test = require('ava');
-var escapeString = require('./');
+import test from 'ava';
+import m from './';
 
-test('escape a string for use in AppleScript', function (t) {
-	t.assert(escapeString('foo"bar') === 'foo\\"bar');
-	t.assert(escapeString('foo\\bar') === 'foo\\\\bar');
-	t.assert(escapeString('weird\\\\name\\"\'') === 'weird\\\\\\\\name\\\\\\"\'');
-	t.assert(escapeString(null) === null);
+test(t => {
+	t.is(m('foo"bar'), 'foo\\"bar');
+	t.is(m('foo\\bar'), 'foo\\\\bar');
+	t.is(m('weird\\\\name\\"\''), 'weird\\\\\\\\name\\\\\\"\'');
+	t.is(m(null), null);
 });
