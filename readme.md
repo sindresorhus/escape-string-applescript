@@ -1,4 +1,4 @@
-# escape-string-applescript [![Build Status](https://travis-ci.org/sindresorhus/escape-string-applescript.svg?branch=master)](https://travis-ci.org/sindresorhus/escape-string-applescript)
+# escape-string-applescript
 
 > Escape a string for use in AppleScript
 
