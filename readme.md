@@ -4,34 +4,26 @@
 
 According to the AppleScript [docs](https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_classes.html#//apple_ref/doc/uid/TP40000983-CH1g-DontLinkElementID_57), `\` and `"` have special meaning and should be escaped.
 
-
 ## Install
 
 ```
-$ npm install --save escape-string-applescript
+$ npm install escape-string-applescript
 ```
-
 
 ## Usage
 
 ```js
-const {execFile} = require('child_process');
-const escapeString = require('escape-string-applescript');
+import {execFile} from 'child_process';
+import escapeStringAppleScript from 'escape-string-applescript';
 
-const str = escapeString('"i like unicorns"');
+const string = escapeStringAppleScript('"i like unicorns"');
 //=> '\"i like unicorns\"'
 
-const script = `set unicornMessage to "${str}"`;
+const script = `set unicornMessage to "${string}"`;
 
 execFile('osascript', ['-e', script]);
 ```
 
-
 ## Related
 
 - [run-applescript](https://github.com/sindresorhus/run-applescript) - Run AppleScript and get the result
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

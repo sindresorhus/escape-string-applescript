@@ -1,9 +1,8 @@
 import test from 'ava';
-import m from './';
+import escapeStringAppleScript from './index.js';
 
-test(t => {
-	t.is(m('foo"bar'), 'foo\\"bar');
-	t.is(m('foo\\bar'), 'foo\\\\bar');
-	t.is(m('weird\\\\name\\"\''), 'weird\\\\\\\\name\\\\\\"\'');
-	t.is(m(null), null);
+test('main', t => {
+	t.is(escapeStringAppleScript('foo"bar'), 'foo\\"bar');
+	t.is(escapeStringAppleScript('foo\\bar'), 'foo\\\\bar');
+	t.is(escapeStringAppleScript('weird\\\\name\\"\''), 'weird\\\\\\\\name\\\\\\"\'');
 });

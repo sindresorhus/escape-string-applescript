@@ -1,35 +1,37 @@
 {
-  "name": "escape-string-applescript",
-  "version": "2.0.0",
-  "description": "Escape a string for use in AppleScript",
-  "license": "MIT",
-  "repository": "sindresorhus/escape-string-applescript",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "escape",
-    "string",
-    "str",
-    "applescript",
-    "osascript",
-    "quote",
-    "quotes",
-    "backslash"
-  ],
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "escape-string-applescript",
+	"version": "2.0.0",
+	"description": "Escape a string for use in AppleScript",
+	"license": "MIT",
+	"repository": "sindresorhus/escape-string-applescript",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"escape",
+		"string",
+		"applescript",
+		"osascript",
+		"quote",
+		"quotes",
+		"backslash"
+	],
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"xo": "^0.38.2"
+	}
 }
