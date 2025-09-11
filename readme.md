@@ -6,14 +6,14 @@ According to the AppleScript [docs](https://developer.apple.com/library/mac/docu
 
 ## Install
 
-```
-$ npm install escape-string-applescript
+```sh
+npm install escape-string-applescript
 ```
 
 ## Usage
 
 ```js
-import {execFile} from 'child_process';
+import {execFile} from 'node:child_process';
 import escapeStringAppleScript from 'escape-string-applescript';
 
 const string = escapeStringAppleScript('"i like unicorns"');
